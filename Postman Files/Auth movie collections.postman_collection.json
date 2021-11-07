@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "c3f26298-41ba-48a2-a2de-b8fe90359eb6",
+		"name": "Auth movie collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3NTI0OTMwLCJpYXQiOjE2MzYyMjg5MzAsImp0aSI6IjQwMDhkODE4MDkwZTRjZjM5OTlmMWIwY2NlOTY5NWZjIiwidXNlcl9pZCI6MTN9.8AnXFWpwwsVQTiJCR9NP8N3eV8wRKLuHWqu05bFDuuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Malik\",\r\n    \"synopsis\":\"cutural movie\",\r\n    \"genre\":\"2\",\r\n    \"director\":\"Ahmad Khan\",\r\n    \"release_date\":\"25-10-2020\",\r\n    \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/add-Movie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add-Movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Favourite Genre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "set-favourite-genre",
+					"host": [
+						"set-favourite-genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recomended Movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3NTI0OTMwLCJpYXQiOjE2MzYyMjg5MzAsImp0aSI6IjQwMDhkODE4MDkwZTRjZjM5OTlmMWIwY2NlOTY5NWZjIiwidXNlcl9pZCI6MTN9.8AnXFWpwwsVQTiJCR9NP8N3eV8wRKLuHWqu05bFDuuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_recomended_movie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_recomended_movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Vote & Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/set_UpVote-DownVote",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"set_UpVote-DownVote"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3NTk4OTI5LCJpYXQiOjE2MzYzMDI5MjksImp0aSI6ImIwM2IyYTg4OGNlYTQ4ZmU4OTJlY2JhMTYyYWRmMDAwIiwidXNlcl9pZCI6MTZ9.6BnWz5yAnJ9JGlCmrNnmKlGxlOSccL3B5d2XiUqDYCA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
